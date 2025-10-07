@@ -1,0 +1,70 @@
+/* --- Ogólne style --- */
+body {
+    background-color: #1a1a1a; /* Ciemne tło */
+    color: #f0f0f0;            /* Jasny kolor tekstu */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* --- Nagłówek --- */
+header {
+    background-color: #0d0d0d; /* Jeszcze ciemniejszy nagłówek */
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #00ff00; /* Zielony akcent */
+}
+
+header h1 {
+    margin: 0;
+    color: #00ff00; /* Zielony tytuł */
+}
+
+/* --- Nawigacja --- */
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s; /* Płynne przejście koloru */
+}
+
+nav a:hover {
+    color: #00ff00; /* Zielony kolor po najechaniu */
+}
+
+/* --- Główna treść --- */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 20px auto; /* Wyśrodkowanie treści */
+}
+
+main h2 {
+    color: #00ff00;
+}
+
+/* --- Przyciski i linki --- */
+button {
+    background-color: #00ff00; /* Zielone tło */
+    color: #1a1a1a;            /* Ciemny tekst */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00cc00; /* Ciemniejszy zielony po najechaniu */
+}
+
+/* --- Stopka --- */
+footer {
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333; /* Delikatna linia oddzielająca */
+}
