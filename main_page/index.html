@@ -1,327 +1,101 @@
 <!doctype html>
 <html lang="pl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Illegal Ball — Paintball</title>
-<meta name="description" content="Illegal Ball — paintball, eventy, integracje. Adrenalina, taktyka, zabawa."/>
-<link rel="shortcut icon" href="data:;base64,iVBORw0KGgo=">
-<style>
-  :root{
-    --yellow:#ffd400;
-    --black:#0b0b0b;
-    --dark:#111;
-    --muted:#666;
-    --max-width:1100px;
-    --radius:12px;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
-    color:#eee;background:linear-gradient(180deg,#070707 0%, #0f0f0f 100%);
-    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
-  }
-
-  /* Container */
-  .wrap{max-width:var(--max-width);margin:0 auto;padding:0 18px;}
-
-  /* Header / nav */
-  header{position:fixed;left:0;right:0;top:0;z-index:60;background:rgba(11,11,11,0.55);backdrop-filter:blur(6px);border-bottom:2px solid rgba(255,212,0,0.08)}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--yellow);font-size:20px}
-  .brand .logo{width:44px;height:44px;background:var(--yellow);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--black);font-weight:800}
-  nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
-  nav a{color:#fff;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-  nav a:hover{background:rgba(255,212,0,0.08);color:var(--yellow)}
-
-  /* Hero / slider */
-  .hero{height:78vh;min-height:420px;position:relative;overflow:hidden;display:flex;align-items:center}
-  .slides{position:absolute;inset:0;display:flex;transition:transform 0.8s cubic-bezier(.2,.9,.2,1)}
-  .slide{min-width:100%;height:100%;background-size:cover;background-position:center;filter:brightness(.55)}
-  .hero-overlay{position:relative;z-index:4;padding-top:70px;width:100%}
-  .hero-content{max-width:980px;margin:0 auto;color:#fff;padding:36px;text-align:left}
-  .kicker{display:inline-block;background:rgba(0,0,0,0.35);padding:6px 10px;border-radius:999px;color:var(--yellow);font-weight:700;margin-bottom:12px}
-  h1{font-size:40px;line-height:1.02;margin:6px 0}
-  p.lead{color:#ddd;opacity:.95;margin:8px 0 18px;max-width:680px}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-  .btn{background:var(--yellow);color:var(--black);padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none}
-  .btn.ghost{background:transparent;border:2px solid rgba(255,212,0,0.12);color:#fff}
-
-  /* Slider controls */
-  .slider-controls{position:absolute;right:18px;bottom:18px;z-index:6;display:flex;gap:8px}
-  .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;box-shadow:0 0 0 4px rgba(0,0,0,0.25) inset}
-  .dot.active{background:var(--yellow)}
-
-  /* Sections */
-  section{padding:64px 0;background:transparent}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-  .card{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .card h3{margin:0 0 6px}
-  .muted{color:var(--muted);font-size:14px}
-
-  /* Gallery */
-  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
-  .gallery img{width:100%;height:140px;object-fit:cover;border-radius:10px;cursor:pointer;display:block;border:3px solid rgba(0,0,0,0.25)}
-
-  /* Price table */
-  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-  .price{background:linear-gradient(180deg,#0d0d0d,#0a0a0a);padding:18px;border-radius:12px;border:2px solid rgba(255,212,0,0.06)}
-  .price h4{margin:0 0 6px;color:var(--yellow)}
-  .price .cost{font-size:22px;font-weight:800;margin-top:8px}
-
-  /* Contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
-  form{background:rgba(255,255,255,0.02);padding:16px;border-radius:12px}
-  input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;margin-bottom:10px}
-
-  /* Footer */
-  footer{padding:18px 0;color:#aaa;text-align:center;border-top:1px solid rgba(255,255,0,0.04)}
-
-  /* Utilities */
-  .center{text-align:center}
-  @media (max-width:880px){
-    h1{font-size:28px}
-    .contact-grid{grid-template-columns:1fr}
-    .hero{height:62vh}
-  }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Illegal Ball — Strona główna</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <div class="brand">
-      <div class="logo">IB</div>
-      Illegal Ball
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Start</a></li>
-        <li><a href="#about">O nas</a></li>
-        <li><a href="#offer">Oferta</a></li>
-        <li><a href="#gallery">Galeria</a></li>
-        <li><a href="#pricing">Cennik</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
+    <div class="brand"><div class="logo">IB</div>Illegal Ball</div>
+    <nav class="nav-links">
+      <a href="index.html">Strona główna</a>
+      <a href="aktualnosci.html">Aktualności</a>
+      <a href="onas.html">O nas</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- HERO / SLIDER -->
-  <section id="home" class="hero">
-    <div class="slides" id="slides">
+  <!-- HERO (slider) -->
+  <section class="hero home-slider">
+    <div class="slides">
       <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=60')"></div>
       <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1555347260-4d8f1fbb0d5b?auto=format&fit=crop&w=1600&q=60')"></div>
       <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1579546928684-45e4b2a9f2b7?auto=format&fit=crop&w=1600&q=60')"></div>
     </div>
 
-    <div class="hero-overlay">
-      <div class="hero-content wrap">
-        <span class="kicker">Paintball • Adrenalina</span>
-        <h1>Illegal Ball — Wejdź do akcji!</h1>
-        <p class="lead">Profesjonalne pole paintballowe — eventy firmowe, urodziny, integracje. Sprzęt, instruktor, bezpieczeństwo. Rezerwuj już dziś i poczuj adrenalinę.</p>
-        <div class="cta-row">
-          <a class="btn" href="#contact">Zarezerwuj</a>
-          <a class="btn ghost" href="#offer">Nasze pakiety</a>
-        </div>
+    <div class="hero-inner wrap">
+      <h1 class="title">Illegal Ball</h1>
+      <p class="hero-text">Miejsce na Twój slogan lub krótki opis w środku — wpisz tu wezwanie do akcji, ofertę specjalną lub krótki tekst, który przyciągnie odwiedzających.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="kontakt.html">Zarezerwuj</a>
+        <a class="btn ghost" href="oferta.html">Sprawdź ofertę</a>
       </div>
     </div>
 
-    <div class="slider-controls" id="dots"></div>
+    <div class="slider-dots" style="position:absolute;right:18px;bottom:18px;z-index:7"></div>
   </section>
 
-  <!-- O NAS -->
-  <section id="about">
+  <!-- 3 latest news -->
+  <section>
     <div class="wrap">
-      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
-        <div style="flex:1;min-width:260px">
-          <h2>O nas</h2>
-          <p class="muted">Illegal Ball to zespół pasjonatów gier terenowych. Od lat organizujemy rozgrywki paintballowe dla grup prywatnych i firm. Dbamy o bezpieczeństwo i atmosferę — dla nas najważniejsza jest dobra zabawa i fair play.</p>
-          <ul class="muted" style="margin-top:12px;line-height:1.6">
-            <li>Profesjonalny sprzęt (maski, markery, ochraniacze)</li>
-            <li>Instruktorzy i sędziowie na miejscu</li>
-            <li>Różne scenariusze gier i pola taktyczne</li>
-          </ul>
-        </div>
-        <div style="width:420px;min-width:220px">
-          <div class="card">
-            <h3>Dlaczego my?</h3>
-            <p class="muted">Bezpiecznie · Profesjonalnie · Dla każdego. Organizujemy imprezy od 8 do 200 osób. Dostosujemy scenariusz do grupy.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2>Aktualności</h2>
+      <p class="muted">Najnowsze z pola — zobacz co u nas nowego.</p>
 
-  <!-- OFERTA -->
-  <section id="offer" style="background:linear-gradient(180deg,rgba(255,212,0,0.02),transparent)">
-    <div class="wrap">
-      <h2 class="center">Oferta</h2>
-      <div class="cards" style="margin-top:18px">
-        <div class="card">
-          <h3>Pakiet Startowy</h3>
-          <p class="muted">Idealny dla początkujących. 2 godziny gry, podstawowy marker, 200 kulek, instrukcja.</p>
-        </div>
-        <div class="card">
-          <h3>Pakiet Premium</h3>
-          <p class="muted">Dłuższa zabawa i lepszy sprzęt. 3 godziny, pełne wyposażenie, 400 kulek, taktyczny scenariusz.</p>
-        </div>
-        <div class="card">
-          <h3>Event Firmowy</h3>
-          <p class="muted">Integracja z zadaniami, rywalizacją i cateringiem. Program dopasowany do firmy.</p>
-        </div>
-        <div class="card">
-          <h3>Pakiet Dziecięcy</h3>
-          <p class="muted">Zajęcia przystosowane do młodszych graczy (wiek minimalny 10 lat) — bezpieczne maski i ograniczona siła markera.</p>
-        </div>
+      <div style="margin-top:14px" class="articles">
+        <!-- Article 1 (placeholder) -->
+        <a class="article" href="aktualnosci.html#art1">
+          <img src="https://picsum.photos/seed/art1/800/600" alt="art1" data-large="https://picsum.photos/seed/art1/1200/900">
+          <h3>Nowy tor taktyczny otwarty</h3>
+          <p>Otworzyliśmy nowy, rozbudowany tor taktyczny z przeszkodami i bunkrami — idealny dla zespołów.</p>
+        </a>
+
+        <!-- Article 2 -->
+        <a class="article" href="aktualnosci.html#art2">
+          <img src="https://picsum.photos/seed/art2/800/600" alt="art2" data-large="https://picsum.photos/seed/art2/1200/900">
+          <h3>Promocja weekendowa</h3>
+          <p>Promocja 2+1 na wszystkie rezerwacje w weekendy — zaproś znajomych i oszczędź.</p>
+        </a>
+
+        <!-- Article 3 -->
+        <a class="article" href="aktualnosci.html#art3">
+          <img src="https://picsum.photos/seed/art3/800/600" alt="art3" data-large="https://picsum.photos/seed/art3/1200/900">
+          <h3>Szkolenia dla firm</h3>
+          <p>Organizujemy szkolenia integracyjne i taktyczne dla grup korporacyjnych — dowiedz się więcej.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- GALERIA -->
-  <section id="gallery">
+  <!-- 4 images preview from gallery -->
+  <section style="background:linear-gradient(180deg,rgba(255,212,0,0.02),transparent)">
     <div class="wrap">
-      <h2 class="center">Galeria</h2>
-      <div style="margin-top:16px" class="gallery" id="galleryGrid">
-        <!-- placeholder images -->
-        <img src="https://picsum.photos/seed/pb1/800/600" alt="gal1" data-large="https://picsum.photos/seed/pb1/1200/900">
-        <img src="https://picsum.photos/seed/pb2/800/600" alt="gal2" data-large="https://picsum.photos/seed/pb2/1200/900">
-        <img src="https://picsum.photos/seed/pb3/800/600" alt="gal3" data-large="https://picsum.photos/seed/pb3/1200/900">
-        <img src="https://picsum.photos/seed/pb4/800/600" alt="gal4" data-large="https://picsum.photos/seed/pb4/1200/900">
-        <img src="https://picsum.photos/seed/pb5/800/600" alt="gal5" data-large="https://picsum.photos/seed/pb5/1200/900">
-        <img src="https://picsum.photos/seed/pb6/800/600" alt="gal6" data-large="https://picsum.photos/seed/pb6/1200/900">
-      </div>
-    </div>
-  </section>
-
-  <!-- CENNIK -->
-  <section id="pricing">
-    <div class="wrap">
-      <h2 class="center">Cennik</h2>
-      <div style="margin-top:18px" class="price-grid">
-        <div class="price">
-          <h4>Pakiet Startowy</h4>
-          <div class="muted">2 godziny · 200 kulek · instruktor</div>
-          <div class="cost">120 zł / os.</div>
-          <div style="margin-top:10px"><a class="btn" href="#contact">Rezerwuj</a></div>
-        </div>
-        <div class="price">
-          <h4>Pakiet Premium</h4>
-          <div class="muted">3 godziny · 400 kulek · pełne wyposażenie</div>
-          <div class="cost">190 zł / os.</div>
-        </div>
-        <div class="price">
-          <h4>Event Firmowy</h4>
-          <div class="muted">Dopasowany program, catering opcjonalnie</div>
-          <div class="cost">Oferta na zapytanie</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAKT -->
-  <section id="contact" style="padding-bottom:120px">
-    <div class="wrap">
-      <h2 class="center">Kontakt</h2>
-      <div style="margin-top:18px" class="contact-grid">
-        <div>
-          <p class="muted">Masz pytania albo chcesz zarezerwować termin? Napisz do nas lub zadzwoń.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
-            <div class="card" style="flex:1;min-width:220px">
-              <strong>Adres</strong><br>
-              ul. Strzelców 12, 00-000 Miasto
-            </div>
-            <div class="card" style="width:260px">
-              <strong>Telefon</strong><br>
-              +48 123 456 789<br><small class="muted">Dostępny: 9:00–20:00</small>
-            </div>
-          </div>
-          <div style="margin-top:12px" class="muted">Mapa: podmień iframe Google Maps z własnymi współrzędnymi</div>
-          <div style="margin-top:12px">
-            <iframe style="width:100%;height:220px;border:0;border-radius:10px" src="https://maps.google.com/maps?q=52.2297,21.0122&z=13&output=embed"></iframe>
-          </div>
-        </div>
-
-        <form onsubmit="event.preventDefault(); alert('Formularz wysłany (demo). Podmień akcję na backend).')">
-          <label class="muted">Imię i nazwisko</label>
-          <input type="text" required placeholder="Twoje imię" />
-          <label class="muted">E-mail</label>
-          <input type="email" required placeholder="kontakt@firma.pl" />
-          <label class="muted">Wiadomość</label>
-          <textarea rows="6" placeholder="Napisz treść..." required></textarea>
-          <button type="submit" class="btn">Wyślij</button>
-        </form>
+      <h2>Galeria — przedsmak</h2>
+      <p class="muted">Kilka zdjęć z ostatnich rozgrywek.</p>
+      <div style="margin-top:12px" class="gallery-grid">
+        <a href="galeria.html"><img src="https://picsum.photos/seed/g1/800/600" alt="g1" data-large="https://picsum.photos/seed/g1/1200/900"></a>
+        <a href="galeria.html"><img src="https://picsum.photos/seed/g2/800/600" alt="g2" data-large="https://picsum.photos/seed/g2/1200/900"></a>
+        <a href="galeria.html"><img src="https://picsum.photos/seed/g3/800/600" alt="g3" data-large="https://picsum.photos/seed/g3/1200/900"></a>
+        <a href="galeria.html"><img src="https://picsum.photos/seed/g4/800/600" alt="g4" data-large="https://picsum.photos/seed/g4/1200/900"></a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <div>© <strong>Illegal Ball</strong> — Wszystkie prawa zastrzeżone</div>
-        <div class="muted">Projekt, realizacja — Twoja firma</div>
-      </div>
+      <div class="center">© <strong>Illegal Ball</strong> — Wszystkie prawa zastrzeżone • <a href="kontakt.html">Kontakt</a></div>
     </div>
   </footer>
-
 </main>
 
-<!-- Lightbox modal -->
-<div id="lightbox" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:999">
-  <img id="lightboxImg" src="" alt="podglad" style="max-width:92%;max-height:86%;border-radius:8px;box-shadow:0 10px 50px rgba(0,0,0,0.8)">
-</div>
-
-<script>
-  /* SLIDER */
-  (function(){
-    const slides = document.getElementById('slides');
-    const slideCount = slides.children.length;
-    let idx = 0;
-    const dotsWrap = document.getElementById('dots');
-
-    // create dots
-    for(let i=0;i<slideCount;i++){
-      const dot=document.createElement('div');dot.className='dot';dot.dataset.i=i;
-      dot.addEventListener('click', ()=>{ go(i); resetTimer(); });
-      dotsWrap.appendChild(dot);
-    }
-    const dots = [...dotsWrap.children];
-    function render(){ slides.style.transform = `translateX(-${idx*100}%)`; dots.forEach(d=>d.classList.remove('active')); dots[idx].classList.add('active'); }
-    function go(i){ idx=(i+slideCount)%slideCount; render(); }
-    function next(){ idx=(idx+1)%slideCount; render(); }
-    render();
-    let timer = setInterval(next, 4500);
-    function resetTimer(){ clearInterval(timer); timer=setInterval(next,4500); }
-    // pause on hover
-    slides.parentElement.addEventListener('mouseenter', ()=>clearInterval(timer));
-    slides.parentElement.addEventListener('mouseleave', ()=>resetTimer());
-  })();
-
-  /* GALLERY LIGHTBOX */
-  (function(){
-    const gallery = document.getElementById('galleryGrid');
-    const lightbox = document.getElementById('lightbox');
-    const img = document.getElementById('lightboxImg');
-    gallery.addEventListener('click', e=>{
-      const t = e.target;
-      if(t.tagName==='IMG'){
-        img.src = t.dataset.large || t.src;
-        lightbox.style.display='flex';
-      }
-    });
-    lightbox.addEventListener('click', ()=>{ lightbox.style.display='none'; img.src=''; });
-    document.addEventListener('keydown', e=>{ if(e.key==='Escape') lightbox.style.display='none'; });
-  })();
-
-  /* Smooth scroll */
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      const target = document.querySelector(a.getAttribute('href'));
-      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
-    });
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
