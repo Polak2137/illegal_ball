@@ -72,3 +72,34 @@ footer{padding:18px 0;text-align:center;color:var(--muted);border-top:1px solid 
   .hero-text{font-size:15px}
   .slides{transition:none}
 }
+.galeria {
+  padding: 40px 20px;
+  background-color: #111; /* tło galerii */
+  color: #fff;
+}
+
+.galeria h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #ffcc00;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.grid-item img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
