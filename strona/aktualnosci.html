@@ -8,7 +8,8 @@
 <body>
 <header>
   <div class="wrap nav">
-    <img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo">
+    <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav class="nav-links">
       <a href="index.html">Strona główna</a>
       <a href="aktualnosci.html">Aktualności</a>
@@ -21,62 +22,38 @@
 </header>
 
 <main style="margin-top:66px">
-  <section>
+  <section id="aktualnosci" class="aktualnosci">
+    <h2>Aktualności</h2>
+    <p class="muted">Bądź na bieżąco z naszymi wydarzeniami.</p>
     <div class="wrap">
-      <h2>Aktualności</h2>
-      <p class="muted">Wszystkie wpisy z kategorii aktualności.</p>
-
-      <div style="margin-top:16px" class="articles">
-        <!-- full articles list (placeholders) -->
-        <article class="article" id="art1">
-          <img src="https://picsum.photos/seed/art1/1200/800" alt="">
-          <h3>Nowy tor taktyczny otwarty</h3>
-          <p class="muted">Dodano: 1 października 2025</p>
-          <p>Opis: Otworzyliśmy nowy tor taktyczny z przeszkodami... (tutaj pełna treść artykułu — podmienisz sam).</p>
-        </article>
-
-        <article class="article" id="art2">
-          <img src="https://picsum.photos/seed/art2/1200/800" alt="">
-          <h3>Promocja weekendowa</h3>
-          <p class="muted">Dodano: 20 września 2025</p>
-          <p>Szczegóły promocji 2+1 dla rezerwacji w weekendy...</p>
-        </article>
-
-        <article class="article" id="art3">
-          <img src="https://picsum.photos/seed/art3/1200/800" alt="">
-          <h3>Szkolenia dla firm</h3>
-          <p class="muted">Dodano: 10 września 2025</p>
-          <p>Organizujemy szkolenia integracyjne i taktyczne — program dopasowany do klienta...</p>
-        </article>
-
-      </div>
+    <div class="fb-page" data-href="https://www.facebook.com/illegalball" data-tabs="timeline" data-width="10000" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/illegalball" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/illegalball">illegal ball</a></blockquote>
     </div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v23.0&appId=APP_ID"></script>
   </section>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Illegal Ball logo">
-        <p>© 2025 Illegal Ball</p>
-        <p><a href="mailto:lonczakpatryk01@gmail.com">kontakt@illegalball.pl</a></p>
-        <p>tel. +48 500 642 362</p>
-      </div>
-
-      <div class="footer-links">
-        <h3>NAWIGACJA</h3>
-        <ul>
-          <li><a href="index.html">Aktualności</a></li>
-          <li><a href="onas.html">O nas</a></li>
-          <li><a href="oferta.html">Oferta</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
 </main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+      <p>© 2025 Illegal Ball</p>
+      <p><a href="mailto:illegalball.biuro@gmail.com">illegalball.biuro@gmail.com</a></p>
+      <p>tel. +48 500 642 362</p>
+    </div>
 
+    <div class="footer-links">
+      <h3>NAWIGACJA</h3>
+      <ul>
+        <li><a href="aktualnosci.html">Aktualności</a></li>
+        <li><a href="onas.html">O nas</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

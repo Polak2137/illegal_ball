@@ -6,7 +6,8 @@
 <body>
 <header>
   <div class="wrap nav">
-    <img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo">
+    <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav class="nav-links">
       <a href="index.html">Strona główna</a>
       <a href="aktualnosci.html">Aktualności</a>
@@ -19,64 +20,125 @@
 </header>
 
 <main style="margin-top:66px">
-  <section>
-    <div class="wrap">
-      <h2>Oferta</h2>
-      <p class="muted">Wybierz pakiet dopasowany do Twoich potrzeb.</p>
+  <section class="oferta">
+    <h1>Nasza Oferta</h1>
 
-      <div style="margin-top:16px" class="articles">
-        <div class="article">
-          <h3>Pakiet Startowy</h3>
-          <p class="muted">2 godziny gry · 200 kulek · instruktor</p>
-          <p>Cena: <strong>120 zł / os.</strong></p>
-        </div>
-
-        <div class="article">
-          <h3>Pakiet Premium</h3>
-          <p class="muted">3 godziny · 400 kulek · pełne wyposażenie</p>
-          <p>Cena: <strong>190 zł / os.</strong></p>
-        </div>
-
-        <div class="article">
-          <h3>Event Firmowy</h3>
-          <p class="muted">Program dopasowany, rywalizacja, catering opcjonalnie</p>
-          <p>Cena: <strong>oferta na zapytanie</strong></p>
-        </div>
-
-        <div class="article">
-          <h3>Pakiet Dziecięcy</h3>
-          <p class="muted">Dostosowany do młodszych graczy (min. 10 lat)</p>
-          <p>Cena: <strong>80 zł / os.</strong></p>
+    <div class="oferta-segment">
+      <div class="oferta-img">
+        <img src="main_image/tlo1.jpg" alt="Paintball"> 
+      </div>
+      <div class="oferta-info">
+        <h2>Paintball</h2>
+        <p>Oferujemy emocjonujące gry paintballowe dla różnych grup wiekowych i okazji. Niezależnie od tego, czy jesteś doświadczonym graczem, czy dopiero zaczynasz swoją przygodę z paintballem, mamy coś dla Ciebie.</p>
+      </div>
+      <div class="oferta-subsegment" onclick="showCennik('paintball')">
+        <div class="oferta-info">
+          <h2>Paintball | Od 13 lat</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dignissimos nesciunt enim reiciendis excepturi temporibus, voluptatibus laudantium nam fugiat aspernatur sit, modi similique, explicabo quae adipisci.</p>
         </div>
       </div>
 
+      <div class="oferta-subsegment" onclick="showCennik('dzieci')">
+        <div class="oferta-info">
+          <h2>Paintball | 10-12 lat</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+        </div>
+      </div>
     </div>
+
+      <div class="oferta-segment" onclick="showCennik('integracja')">
+       <div class="oferta-img">
+         <img src="main_image/tlo1.jpg" alt="Organizacja Imprez Integracyjnych">
+       </div>
+       <div class="oferta-info">
+         <h2>Integracja Firmowa</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+        </div>
+      </div>
+
+      <div class="oferta-segment" onclick="showCennik('wieczory')">
+        <div class="oferta-img">
+          <img src="main_image/tlo1.jpg" alt="Wieczory kawalerskie">
+        </div>
+        <div class="oferta-info">
+          <h2>Wieczory Kawalerskie</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+        </div>
+      </div>
+
+      <div class="oferta-segment" onclick="showCennik('eventy')">
+        <div class="oferta-img">
+          <img src="main_image/tlo1.jpg" alt="Ogólna organizacja eventów i wydarzeń">
+        </div>
+        <div class="oferta-info">
+          <h2>Organizacja Eventów</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+        </div>
+      </div>
+
+      <div class="oferta-segment" onclick="showCennik('quady')">
+       <div class="oferta-img">
+         <img src="main_image/tlo1.jpg" alt="Quady">
+       </div>
+        <div class="oferta-info">
+         <h2>Przejażdżki Quadami</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+       </div>
+      </div>
+
+      <div class="oferta-segment" onclick="showCennik('metale')">
+        <div class="oferta-img">
+         <img src="main_image/tlo1.jpg" alt="Wykrywacze metali">
+        </div>
+       <div class="oferta-info">
+          <h2>Wykrywacze Metali</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+       </div>
+      </div>
+
+      <div class="oferta-segment" onclick="showCennik('zjezdzalnie')">
+        <div class="oferta-img">
+          <img src="main_image/tlo1.jpg" alt="Dmuchane zjeżdżalnie">
+        </div>
+        <div class="oferta-info">
+          <h2>Dmuchane Zjeżdżalnie</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id voluptas, quis assumenda nam distinctio cumque enim voluptatibus? Magni expedita, dicta rerum assumenda tenetur consequuntur iste explicabo nostrum et repellat?</p>
+        </div>
+      </div>
+
   </section>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Illegal Ball logo">
-        <p>© 2025 Illegal Ball</p>
-        <p><a href="mailto:lonczakpatryk01@gmail.com">kontakt@illegalball.pl</a></p>
-        <p>tel. +48 500 642 362</p>
-      </div>
 
-      <div class="footer-links">
-        <h3>NAWIGACJA</h3>
-        <ul>
-          <li><a href="index.html">Aktualności</a></li>
-          <li><a href="onas.html">O nas</a></li>
-          <li><a href="oferta.html">Oferta</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </div>
+  <!-- MODAL CENNIK -->
+  <div id="modalCennik" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCennik()">&times;</span>
+      <div id="cennik-content"></div>
     </div>
-  </footer>
+  </div>
 </main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+      <p>© 2025 Illegal Ball</p>
+      <p><a href="mailto:illegalball.biuro@gmail.com">illegalball.biuro@gmail.com</a></p>
+      <p>tel. +48 500 642 362</p>
+    </div>
 
+    <div class="footer-links">
+      <h3>NAWIGACJA</h3>
+      <ul>
+        <li><a href="aktualnosci.html">Aktualności</a></li>
+        <li><a href="onas.html">O nas</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

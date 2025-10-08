@@ -10,7 +10,8 @@
 
 <header>
   <div class="wrap nav">
-    <img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo">
+    <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav class="nav-links">
       <a href="index.html">Strona główna</a>
       <a href="aktualnosci.html">Aktualności</a>
@@ -31,7 +32,7 @@
     </div>
 
     <div class="hero-inner wrap">
-      <h1 class="title">Illegal Ball</h1>
+      <h1 class="title">illegal Ball</h1>
       <p class="hero-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde temporibus qui ullam dolor numquam minus vitae, maiores et voluptas molestias, blanditiis quisquam fugiat beatae commodi vero sed nihil incidunt aliquid.</p>
     </div>
 
@@ -39,75 +40,107 @@
   </section>
 
 
-  <section>
+  <section style="padding:40px 0;">
     <div class="wrap">
-      <h2>Aktualności</h2>
-      <p class="muted">Najnowsze z pola — zobacz co u nas nowego.</p>
+      <h2>Nasza oferta</h2>
+      <p class="muted">Sprawdź, co mamy dla Ciebie przygotowane.</p>
 
-      <div style="margin-top:14px" class="articles">
-        <!-- Article 1 (placeholder) -->
-        <a class="article" href="aktualnosci.html#art1">
-          <img src="https://picsum.photos/seed/art1/800/600" alt="art1" data-large="https://picsum.photos/seed/art1/1200/900">
-          <h3>Nowy tor taktyczny otwarty</h3>
-          <p>Otworzyliśmy nowy, rozbudowany tor taktyczny z przeszkodami i bunkrami — idealny dla zespołów.</p>
-        </a>
-
-        <!-- Article 2 -->
-        <a class="article" href="aktualnosci.html#art2">
-          <img src="https://picsum.photos/seed/art1/800/600" alt="art2" data-large="https://picsum.photos/seed/art1/1200/900">
-          <h3>Promocja weekendowa</h3>
-          <p>Promocja 2+1 na wszystkie rezerwacje w weekendy — zaproś znajomych i oszczędź.</p>
-        </a>
-
-        <!-- Article 3 -->
-        <a class="article" href="aktualnosci.html#art3">
-          <img src="https://picsum.photos/seed/art1/800/600" alt="art3" data-large="https://picsum.photos/seed/art1/1200/900">
-          <h3>Szkolenia dla firm</h3>
-          <p>Organizujemy szkolenia integracyjne i taktyczne dla grup korporacyjnych — dowiedz się więcej.</p>
-        </a>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;">
+        <div style="flex:1;min-width:250px;background:#f2f2f2;padding:20px;border-radius:8px;text-align:center;">
+          <h3>Oferta 1</h3>
+          <p>Opis pierwszej oferty — idealnej dla drużyn i grup.</p>
+        </div>
+        <div style="flex:1;min-width:250px;background:#f2f2f2;padding:20px;border-radius:8px;text-align:center;">
+          <h3>Oferta 2</h3>
+          <p>Opis drugiej oferty — specjalne wydarzenia i wyzwania.</p>
+        </div>
+        <div style="flex:1;min-width:250px;background:#f2f2f2;padding:20px;border-radius:8px;text-align:center;">
+          <h3>Oferta 3</h3>
+          <p>Opis trzeciej oferty — pakiety rodzinne i grupowe.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 4 images preview from gallery -->
-  <section style="background:linear-gradient(180deg,rgba(255,212,0,0.02),transparent)">
-    <div class="wrap">
-      <h2>Galeria — przedsmak</h2>
-      <p class="muted">Kilka zdjęć z ostatnich rozgrywek.</p>
-      <div style="margin-top:12px" class="gallery-grid">
-        <a href="galeria.html"><img src="https://picsum.photos/seed/g1/800/600" alt="g1" data-large="https://picsum.photos/seed/g1/1200/900"></a>
-        <a href="galeria.html"><img src="https://picsum.photos/seed/g1/800/600" alt="g2" data-large="https://picsum.photos/seed/g1/1200/900"></a>
-        <a href="galeria.html"><img src="https://picsum.photos/seed/g1/800/600" alt="g3" data-large="https://picsum.photos/seed/g1/1200/900"></a>
-        <a href="galeria.html"><img src="https://picsum.photos/seed/g1/800/600" alt="g4" data-large="https://picsum.photos/seed/g1/1200/900"></a>
+  <!-- Galeria + Aktualności -->
+  <section style="padding:40px 0;background:linear-gradient(180deg,rgba(255,212,0,0.02),transparent)">
+    <div class="wrap" style="display:flex;gap:40px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:300px;">
+        <h2>Galeria</h2>
+        <p class="muted">Kilka zdjęć z ostatnich rozgrywek.</p>
+        <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <a href="galeria.html"><img src="https://picsum.photos/seed/g1/800/600" alt="g1" style="width:100%"></a>
+          <a href="galeria.html"><img src="https://picsum.photos/seed/g2/800/600" alt="g2" style="width:100%"></a>
+          <a href="galeria.html"><img src="https://picsum.photos/seed/g3/800/600" alt="g3" style="width:100%"></a>
+          <a href="galeria.html"><img src="https://picsum.photos/seed/g4/800/600" alt="g4" style="width:100%"></a>
+        </div>
+      </div>
+
+      <div style="flex:1;min-width:300px;">
+        <h2>Aktualności</h2>
+        <p class="muted">Najnowsze informacje i wydarzenia.</p>
+        <div style="display:flex;flex-direction:column;gap:15px;margin-top:20px;">
+          <div style="background:#f2f2f2;padding:15px;border-radius:8px;">
+            <h3>Nowy tor taktyczny</h3>
+            <p>Otworzyliśmy nowy tor taktyczny z przeszkodami i bunkrami — idealny dla zespołów.</p>
+          </div>
+          <div style="background:#f2f2f2;padding:15px;border-radius:8px;">
+            <h3>Promocja weekendowa</h3>
+            <p>Promocja 2+1 na wszystkie rezerwacje w weekendy — zaproś znajomych i oszczędź.</p>
+          </div>
+          <div style="background:#f2f2f2;padding:15px;border-radius:8px;">
+            <h3>Szkolenia dla firm</h3>
+            <p>Organizujemy szkolenia integracyjne i taktyczne dla grup korporacyjnych — dowiedz się więcej.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Illegal Ball logo">
-        <p>© 2025 Illegal Ball</p>
-        <p><a href="mailto:lonczakpatryk01@gmail.com">kontakt@illegalball.pl</a></p>
-        <p>tel. +48 500 642 362</p>
-      </div>
-
-      <div class="footer-links">
-        <h3>NAWIGACJA</h3>
-        <ul>
-          <li><a href="index.html">Aktualności</a></li>
-          <li><a href="onas.html">O nas</a></li>
-          <li><a href="oferta.html">Oferta</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+  <!-- Recenzje -->
+  <section style="padding:40px 0;">
+    <div class="wrap">
+      <h2>Recenzje</h2>
+      <p class="muted">Co mówią nasi klienci.</p>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;">
+        <div style="flex:1;min-width:250px;background:#f9f9f9;padding:20px;border-radius:8px;">
+          <p>"Świetna zabawa, fantastyczna obsługa!"</p>
+          <strong>- Jan Kowalski</strong>
+        </div>
+        <div style="flex:1;min-width:250px;background:#f9f9f9;padding:20px;border-radius:8px;">
+          <p>"Miejsce idealne na integracje firmowe."</p>
+          <strong>- Anna Nowak</strong>
+        </div>
+        <div style="flex:1;min-width:250px;background:#f9f9f9;padding:20px;border-radius:8px;">
+          <p>"Polecam każdemu, kto szuka emocji!"</p>
+          <strong>- Michał Wiśniewski</strong>
+        </div>
       </div>
     </div>
-  </footer>
-
+  </section>
 </main>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+      <p>© 2025 Illegal Ball</p>
+      <p><a href="mailto:illegalball.biuro@gmail.com">illegalball.biuro@gmail.com</a></p>
+      <p>tel. +48 500 642 362</p>
+    </div>
 
+    <div class="footer-links">
+      <h3>NAWIGACJA</h3>
+      <ul>
+        <li><a href="aktualnosci.html">Aktualności</a></li>
+        <li><a href="onas.html">O nas</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
