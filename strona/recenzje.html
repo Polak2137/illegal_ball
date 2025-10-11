@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="pl">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Kontakt — Illegal Ball</title>
+<title>O nas — Illegal Ball</title>
 <link rel="stylesheet" href="style.css"></head>
 <body>
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <nav class="nav-links">
       <a href="index.html">Strona główna</a>
       <a href="aktualnosci.html">Aktualności</a>
@@ -18,37 +19,34 @@
   </div>
 </header>
 
+
 <main>
-  <section class="kontakt">
+  <section>
     <div class="wrap">
-      <h2>Kontakt</h2>
-      <p class="muted">Masz pytania lub chcesz zarezerwować termin? Napisz lub zadzwoń.</p>
+      <h2>O nas</h2>
+      <p class="muted">Kilka słów o Illegal Ball — naszej misji i zasadach.</p>
 
-      <div class="kontakt-grid">
-        <form onsubmit="event.preventDefault(); alert('Formularz wysłany (demo). Podmień na swój backend).')">
-          <label class="muted">Imię i nazwisko</label>
-          <input type="text" required>
-          <label class="muted">E-mail</label>
-         <input type="email" required>
-         <label class="muted">Wiadomość</label>
-         <textarea required rows="6"></textarea>
-         <button class="btn" type="submit">Wyślij</button>
-       </form>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
+        <div style="flex:1;min-width:260px">
+          <p>Jesteśmy pasjonatami gier terenowych. Od lat organizujemy rozgrywki paintballowe dla grup prywatnych i firm. Dbamy o bezpieczeństwo i dobrą zabawę. Nasze pole wyposażone jest w profesjonalny sprzęt, a każda rozgrywka nadzorowana jest przez instruktorów.</p>
+          <h3>Zasady bezpieczeństwa</h3>
+          <ul class="muted" style="line-height:1.6">
+            <li>Minimalny wiek: 10 lat (z opiekunem dla młodszych)</li>
+            <li>Wymagana ochrona oczu (maski obowiązkowe)</li>
+            <li>Zakaz wyciągania maski na polu gry</li>
+          </ul>
+        </div>
 
-      <div class="kontakt-info">
-          <h3>Dane kontaktowe</h3>
-          <p class="muted">39-320 Przecław</p>
-          <p class="muted">Telefon: +48 500 642 362</p>
-          <p class="muted"><a href="mailto:illegalball.biuro@gmail.com">illegalball.biuro@gmail.com</a></p>
-         <div class="mapa-wrap">
-           <iframe
-             src="https://maps.google.com/maps?q=50.203544714411734,21.460796543296343&z=13&output=embed"
-             allowfullscreen=""
-              loading="lazy"
-           ></iframe>
+        <div style="width:380px;min-width:220px">
+          <div class="article">
+            <h3>Godziny otwarcia</h3>
+            <p class="muted">Pon-Pt: 00:00–00:00<br>Sob-Nd: 0:00–00:00</p>
+            <h3>Kontakt</h3>
+            <p class="muted"><br></p>
           </div>
-       </div>
-     </div>
+        </div>
+      </div>
+
     </div>
   </section>
 </main>
@@ -57,7 +55,7 @@
     <div class="footer-logo">
       <a href="index.html" class="brand"><img src="main_image/Illegal_Ball_logo_2000x500.png" alt="Logo" class="logo"></a>
       <p>© 2025 Illegal Ball</p>
-      <p><a href="mailto:illegalball.biuro@gmail.com">illegalball.biuro@gmail.com</a></p>
+      <p><a href="mailto:illegalball.biuro@gmail.com">lonczakpatryk01@gmail.com</a></p>
       <p>tel. +48 500 642 362</p>
     </div>
 
