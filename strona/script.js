@@ -164,6 +164,32 @@ function showCennik(type) {
         <li><h2>Wymagana zgoda dla osób poniżej 18 roku życia.</h2></li>
         <a href="files/zgoda.pdf" download>Pobierz dokument</a>
       </ul>`;
+  } else if (type === 'szkola') {
+    content.innerHTML = `
+      <h3>Cennik</h3>
+      <ul>
+        <li>Pakiet Startowy - sprzęt do gry + 200 kulek - 70 zł </li>
+        <li>Pakiet Medium - sprzęt do gry + 300 kulek - 90 zł </li>
+        <li>Pakiet Popular - sprzęt do gry + 500 kulek - 125 zł </li>
+        <li>Pakiet dodatkowych kulek :</li>
+            <li>• 100kulek - 20 zł </li>
+            <li>• 500kulek - 85 zł</li>
+        <li><h2>Wymagana zgoda dla osób poniżej 18 roku życia.</h2></li>
+        <a href="files/zgoda.pdf" download>Pobierz dokument</a>
+      </ul>`;
+  } else if (type === 'voucher') {
+    content.innerHTML = `
+      <h3>Cennik</h3>
+      <ul>
+        <li>Pakiet Startowy - sprzęt do gry + 200 kulek - 70 zł </li>
+        <li>Pakiet Medium - sprzęt do gry + 300 kulek - 90 zł </li>
+        <li>Pakiet Popular - sprzęt do gry + 500 kulek - 125 zł </li>
+        <li>Pakiet dodatkowych kulek :</li>
+            <li>• 100kulek - 20 zł </li>
+            <li>• 500kulek - 85 zł</li>
+        <li><h2>Wymagana zgoda dla osób poniżej 18 roku życia.</h2></li>
+        <a href="files/zgoda.pdf" download>Pobierz dokument</a>
+      </ul>`;
   }
 
   modal.style.display = 'flex';
