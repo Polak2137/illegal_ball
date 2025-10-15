@@ -179,5 +179,171 @@ h2{margin:0 0 12px;font-size:26px}
 .hamburger.open {transform:rotate(90deg);}
 
 
+.cennik { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+.cennik h1 { color: #c5d210; margin-bottom: 40px;text-align: center; }
 
+.cennik-segment {
+  background: #111;
+  border-radius: 12px;
+  border: 2px solid #c5d210;
+  margin-bottom: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.cennik-segment:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 18px rgba(197,210,16,0.5);
+}
 
+.cennik-segment img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.cennik-segment:hover img { transform: scale(1.05); }
+
+.cennik-content {
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+}
+.cennik-content h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+.btn-szczegoly {
+  background: #c5d210;
+  color: #0b0b0b;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-szczegoly:hover { background: #d4e024; }
+
+@media (max-width: 768px) {
+  .cennik-segment img { height: 240px; }
+  .cennik-content h2 { font-size: 1.2rem; }
+}
+
+.cennik-paintball {
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+}
+.cennik-paintball h1 {
+  color: var(--yellow);
+  margin-bottom: 30px;
+}
+.pakiet {
+  border: 2px solid var(--yellow);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.pakiet h2 {
+  margin-bottom: 12px;
+}
+.pakiet ul {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 15px;
+}
+.pakiet ul li {
+  margin-bottom: 8px;
+}
+.pakiet p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.btn-container {
+  text-align: center;
+  margin-top: 40px;
+}
+.btn-container .btn {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-container .btn:hover {
+  background: #d4e024;
+}
+
+    .cennik-paintball h1 {
+      text-align: center;
+      color: var(--yellow);
+      margin-bottom: 40px;
+    }
+
+    .pakiet {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+      background: #111;
+      border: 2px solid var(--yellow);
+      border-radius: var(--radius);
+      margin-bottom: 40px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .pakiet:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 12px rgba(197, 210, 16, 0.5);
+    }
+
+    .pakiet-info {
+      flex: 1 1 55%;
+      padding: 25px;
+    }
+
+    .pakiet-info h2 {
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+
+    .pakiet-info ul {
+      list-style: disc inside;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+
+    .pakiet-info a.btn {
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .pakiet-img {
+      flex: 1 1 40%;
+      background-size: cover;
+      background-position: center;
+      min-height: 250px;
+    }
+
+    /* PRZYKŁADOWE ZDJĘCIA (PODMIEŃ NA SWOJE ŚCIEŻKI) */
+    .pakiet-standard .pakiet-img { background-image: url("oferta_image/13+.jpg"); }
+    .pakiet-dzieci .pakiet-img { background-image: url("oferta_image/7-9.jpg"); }
+    .pakiet-szkolny .pakiet-img { background-image: url("oferta_image/10-12.jpg"); }
+    .pakiet-voucher .pakiet-img { background-image: url("oferta_image/voucher.jpg"); }
+
+    @media (max-width: 768px) {
+      .pakiet {
+        flex-direction: column;
+      }
+      .pakiet-img {
+        width: 100%;
+        height: 220px;
+      }
+    }
