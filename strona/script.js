@@ -147,9 +147,6 @@ function showCennik(type) {
         <li>Pakiet Startowy - sprzęt do gry + 200 kulek - 70 zł </li>
         <li>Pakiet Medium - sprzęt do gry + 300 kulek - 90 zł </li>
         <li>Pakiet Popular - sprzęt do gry + 500 kulek - 125 zł </li>
-        <li>Pakiet dodatkowych kulek :</li>
-            <li>• 100 kulek - 20 zł </li>
-            <li>• 500 kulek - 85 zł</li>
       </ul>`;
   } else if (type === 'dzieci') {
     content.innerHTML = `
@@ -158,9 +155,6 @@ function showCennik(type) {
         <li>Pakiet Startowy - sprzęt do gry + 200 kulek - 70 zł </li>
         <li>Pakiet Medium - sprzęt do gry + 300 kulek - 90 zł </li>
         <li>Pakiet Popular - sprzęt do gry + 500 kulek - 125 zł </li>
-        <li>Pakiet dodatkowych kulek :</li>
-            <li>• 100kulek - 20 zł </li>
-            <li>• 500kulek - 85 zł</li>
         <li><br></li>
         <li><b>Wymagana zgoda dla osób poniżej 18 roku życia.</b></li>
         <a href="files/zgoda.pdf" download>Pobierz dokument</a>
@@ -171,9 +165,7 @@ function showCennik(type) {
       <ul>
         <li>UWAGA! </li>
         <li>Pakiet obejmuje jedynie zapłatę za kulki, sprzęt oraz umundurowanie gratis!</li>
-        <li><br></li>
-        <li>100 kulek - 20 zł  </li>
-        <li>500 kulek - 85 zł  </li>
+
         <li><br></li>
         <li><b>Wymagana zgoda dla osób poniżej 18 roku życia.</b></li>
         <a href="files/zgoda.pdf" download>Pobierz dokument</a>
@@ -187,6 +179,17 @@ function showCennik(type) {
         <li><br></li>
         <li>100 kulek - 20 zł  </li>
         <li>500 kulek - 85 zł  </li>
+      </ul>`;
+  } else if (type === 'niemowlaki') {
+    content.innerHTML = `
+      <h3>Cennik</h3>
+      <ul>
+        <li>Pakiet Startowy - sprzęt do gry + 200 kulek - 70 zł </li>
+        <li>Pakiet Medium - sprzęt do gry + 300 kulek - 90 zł </li>
+        <li>Pakiet Popular - sprzęt do gry + 500 kulek - 125 zł </li>
+        <li><br></li>
+        <li><b>Wymagana zgoda dla osób poniżej 18 roku życia.</b></li>
+        <a href="files/zgoda.pdf" download>Pobierz dokument</a>
       </ul>`;
   }
 
